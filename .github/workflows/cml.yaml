@@ -18,7 +18,7 @@ jobs:
           cml-publish feature_importance.png --md >> report.md
           cml-publish residuals.png --md >> report.md
           
-          cml comment create report.md
+          cml-send-comment report.md
 #           echo '![](./plot.png "Confusion Matrix")' >> report.md
-#         env:
-#           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
